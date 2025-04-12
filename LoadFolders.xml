@@ -1,0 +1,22 @@
+<loadFolders>
+  <v1.4>
+    <li>/</li>
+    <li IfModActive="dankpyon.medieval.overhaul">Mods and Shit/Medieval Overhaul</li>
+    <li IfModActive="VanillaExpanded.VFECore">Mods and Shit/VE Furniture</li>
+    <li IfModActive="VanillaExpanded.VFESpacer">Mods and Shit/VFE Spacer</li>
+    <li IfModActive="oskarpotocki.vfe.empire">Mods and Shit/VFE Empire</li>
+    <li IfModActive="zylle.clocks">Mods and Shit/Clocks</li>
+    <li IfModActive="Ludeon.Rimworld.Ideology">Mods and Shit/Ideology</li>
+    <li IfModActive="OskarPotocki.VFE.Classical">Mods and Shit/VFE Classical</li>
+  </v1.4>
+  <v1.5>
+    <li>/</li>
+    <li IfModActive="dankpyon.medieval.overhaul">Mods and Shit/Medieval Overhaul</li>
+    <li IfModActive="VanillaExpanded.VFECore">Mods and Shit/VE Furniture</li>
+    <li IfModActive="VanillaExpanded.VFESpacer">Mods and Shit/VFE Spacer</li>
+    <li IfModActive="oskarpotocki.vfe.empire">Mods and Shit/VFE Empire</li>
+    <li IfModActive="zylle.clocks">Mods and Shit/Clocks</li>
+    <li IfModActive="Ludeon.Rimworld.Ideology">Mods and Shit/Ideology</li>
+    <li IfModActive="OskarPotocki.VFE.Classical">Mods and Shit/VFE Classical</li>
+  </v1.5>
+</loadFolders>

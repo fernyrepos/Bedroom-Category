@@ -14,19 +14,7 @@
                     </value>
                 </Operation>
                 <Operation Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="Bed_Ergonomic"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                <Operation Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="Bed_DoubleErgonomic"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                <Operation Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="Bed_DoubleErgonomic"]/designationCategory</xpath>
+                    <xpath>Defs/ThingDef[@Name="VFE_ErgonomicBedBase"]/designationCategory</xpath>
                     <value>
                         <designationCategory>Ferny_Bedroom</designationCategory>
                     </value>
@@ -90,4 +78,28 @@
                   </match>
                   </match>
                 </Operation>
+
+
+
+
+<!-- VE Furniture update -->
+                <Operation Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[@Name="VFE_ChiseledBedBase"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Ferny_Bedroom</designationCategory>
+                    </value>
+                </Operation>
+                <Operation Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[@Name="VFE_SimpleBedBase"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Ferny_Bedroom</designationCategory>
+                    </value>
+                </Operation>
+
+
+
+
+
+
+
 </Patch>

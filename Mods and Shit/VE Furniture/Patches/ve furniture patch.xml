@@ -1,105 +1,249 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Patch>              
-<!-- PATCHES -->
-                <Operation Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="Bed_StoneSlab"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                <Operation Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="Bed_Simple"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                <Operation Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[@Name="VFE_ErgonomicBedBase"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                <Operation Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="Bed_Kingsize"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                <Operation Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="Table_LightEndTable"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                <Operation Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="Table_RoyalEndTable"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                <Operation Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="Table_RoyalDresser"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                <Operation Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="Table_Wardrobe"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                <Operation Class="PatchOperationFindMod">
-                  <mods>
-                    <li>Medieval Overhaul</li>
-                  </mods>
-                  <match Class="PatchOperationFindMod">
-                    <mods>
-                        <li>Progression: Aesthetics</li>
-                    </mods>
-                    <match Class="PatchOperationSequence">
-                    <operations>
-                    <!-- ROYAL FURNITURE -->
-                        <li Class="PatchOperationReplace">
-                            <xpath>Defs/ThingDef[defName="Table_RoyalEndTable"]/designationCategory</xpath>
-                            <value>
-                              <designationCategory></designationCategory>
-                            </value>
-                        </li>
-                    <!-- SIMPLE BED -->
-                        <li Class="PatchOperationReplace">
-                            <success>Always</success>
-                            <xpath>Defs/ThingDef[defName="Bed_Simple"]/designationCategory</xpath>
-                            <value>
-                              <designationCategory></designationCategory>
-                            </value>
-                        </li>
-                    </operations>
-                  </match>
-                  </match>
-                </Operation>
-
-
-
-
-<!-- VE Furniture update -->
-                <Operation Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[@Name="VFE_ChiseledBedBase"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                <Operation Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[@Name="VFE_SimpleBedBase"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-
-
-
-
-
-
+<?xml version='1.0' encoding='UTF-8'?>
+<Patch>
+	<!-- PATCHES -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Bed_StoneSlab"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Bed_StoneSlab"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Bed_StoneSlab"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Bed_Simple"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Bed_Simple"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Bed_Simple"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="VFE_Bed_SimpleDouble"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="VFE_Bed_SimpleDouble"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="VFE_Bed_SimpleDouble"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Bed_Ergonomic"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Bed_Ergonomic"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Bed_Ergonomic"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Bed_DoubleErgonomic"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Bed_DoubleErgonomic"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Bed_DoubleErgonomic"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Bed_Kingsize"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Bed_Kingsize"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Bed_Kingsize"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Table_RoyalEndTable"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Table_RoyalEndTable"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Table_RoyalEndTable"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Table_RoyalDresser"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Table_RoyalDresser"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Table_RoyalDresser"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Table_Wardrobe"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Table_Wardrobe"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Table_Wardrobe"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Medieval Overhaul</li>
+		</mods>
+		<match Class="PatchOperationFindMod">
+			<mods>
+				<li>Progression: Aesthetics</li>
+			</mods>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<!-- ROYAL FURNITURE -->
+					<li Class="PatchOperationConditional">
+						<xpath>/Defs/ThingDef[defName="Table_RoyalEndTable"]/designationCategory</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/ThingDef[defName="Table_RoyalEndTable"]/designationCategory</xpath>
+							<value>
+								<designationCategory IsNull="True"/>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName="Table_RoyalEndTable"]</xpath>
+							<value>
+								<designationCategory IsNull="True"/>
+							</value>
+						</nomatch>
+					</li>
+					<!-- SIMPLE BED -->
+					<li Class="PatchOperationConditional">
+						<xpath>/Defs/ThingDef[defName="Bed_Simple"]/designationCategory</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/ThingDef[defName="Bed_Simple"]/designationCategory</xpath>
+							<value>
+								<designationCategory IsNull="True"/>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName="Bed_Simple"]</xpath>
+							<value>
+								<designationCategory IsNull="True"/>
+							</value>
+						</nomatch>
+					</li>
+					<li Class="PatchOperationConditional">
+						<xpath>/Defs/ThingDef[defName="VFE_Bed_SimpleDouble"]/designationCategory</xpath>
+						<match Class="PatchOperationReplace">
+							<xpath>/Defs/ThingDef[defName="VFE_Bed_SimpleDouble"]/designationCategory</xpath>
+							<value>
+								<designationCategory IsNull="True"/>
+							</value>
+						</match>
+						<nomatch Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName="VFE_Bed_SimpleDouble"]</xpath>
+							<value>
+								<designationCategory IsNull="True"/>
+							</value>
+						</nomatch>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+	<!-- VE Furniture update -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Bed_StoneSlab"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Bed_StoneSlab"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Bed_StoneSlab"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="VFE_Bed_StoneSlabDouble"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="VFE_Bed_StoneSlabDouble"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="VFE_Bed_StoneSlabDouble"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="VFE_RoyalWardrobe"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="VFE_RoyalWardrobe"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="VFE_RoyalWardrobe"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
 
 </Patch>

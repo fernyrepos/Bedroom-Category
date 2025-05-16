@@ -2,12 +2,6 @@
 <Patch>              
 <!-- PATCHES -->
                 <Operation Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="Bed_Simple"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                <Operation Class="PatchOperationReplace">
                     <xpath>Defs/ThingDef[@Name="VFE_ErgonomicBedBase"]/designationCategory</xpath>
                     <value>
                         <designationCategory>Ferny_Bedroom</designationCategory>

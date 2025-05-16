@@ -2,12 +2,6 @@
 <Patch>              
 <!-- PATCHES -->
                 <Operation Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="Bed_StoneSlab"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                <Operation Class="PatchOperationReplace">
                     <xpath>Defs/ThingDef[defName="Bed_Simple"]/designationCategory</xpath>
                     <value>
                         <designationCategory>Ferny_Bedroom</designationCategory>
@@ -43,12 +37,24 @@
                         <designationCategory>Ferny_Bedroom</designationCategory>
                     </value>
                 </Operation>
-                <Operation Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="Table_Wardrobe"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Table_Wardrobe"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Table_Wardrobe"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Table_Wardrobe"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
+
+
                 <Operation Class="PatchOperationFindMod">
                   <mods>
                     <li>Medieval Overhaul</li>
@@ -97,9 +103,12 @@
                 </Operation>
 
 
-
-
-
+                <Operation Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[@Name="VFE_ErgonomicBedBase"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Ferny_Bedroom</designationCategory>
+                    </value>
+                </Operation>
 
 
 </Patch>

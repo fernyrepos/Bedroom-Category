@@ -228,8 +228,6 @@
 			</value>
 		</nomatch>
 	</Operation>
-	
-	
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/ThingDef[defName="VFE_RoyalWardrobe"]/designationCategory</xpath>
 		<match Class="PatchOperationReplace">
@@ -245,5 +243,4 @@
 			</value>
 		</nomatch>
 	</Operation>
-
 </Patch>

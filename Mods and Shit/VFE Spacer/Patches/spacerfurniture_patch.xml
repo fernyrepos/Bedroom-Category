@@ -2,13 +2,7 @@
 <Patch>              
 <!-- PATCHES -->
                 <Operation Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="Bed_AdvBed"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                <Operation Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="Bed_AdvDoubleBed"]/designationCategory</xpath>
+                    <xpath>Defs/ThingDef[@Name="VFES_AdvancedBedBase"]/designationCategory</xpath>
                     <value>
                         <designationCategory>Ferny_Bedroom</designationCategory>
                     </value>

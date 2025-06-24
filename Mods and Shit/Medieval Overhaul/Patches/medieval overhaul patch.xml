@@ -1,102 +1,20 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version='1.0' encoding='UTF-8'?>
 <Patch>
-                <Operation Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/ThingDef[@Name="DankPyon_BedWithQualityBase"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                <Operation Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/ThingDef[@Name="DankPyon_ArtableBedBase"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                <Operation Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/ThingDef[@Name="DankPyon_BasicBedBase"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                <Operation Class="PatchOperationAdd">
-                    <success>Always</success>
-                    <xpath>Defs/ThingDef[defName="DankPyon_RoyalDresser"]</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                <Operation Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/ThingDef[defName="DankPyon_RusticCloset"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                <Operation Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/ThingDef[defName="DankPyon_RusticCloset1x2c"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                    <Operation Class="PatchOperationConditional">
-                        <xpath>/Defs/ThingDef[defName="DankPyon_RoyalCloset"]/designationCategory</xpath>
-                        <match Class="PatchOperationReplace">
-                            <xpath>/Defs/ThingDef[defName="DankPyon_RoyalCloset"]/designationCategory</xpath>
-                            <value>
-                                <designationCategory>Ferny_Bedroom</designationCategory>
-                            </value>
-                        </match>
-                        <nomatch Class="PatchOperationAdd">
-                            <xpath>/Defs/ThingDef[defName="DankPyon_RoyalCloset"]</xpath>
-                            <value>
-                                <designationCategory>Ferny_Bedroom</designationCategory>
-                            </value>
-                        </nomatch>
-                    </Operation>
-                    <Operation Class="PatchOperationConditional">
-                        <xpath>/Defs/ThingDef[defName="DankPyon_RusticTallEndTable"]/designationCategory</xpath>
-                        <match Class="PatchOperationReplace">
-                            <xpath>/Defs/ThingDef[defName="DankPyon_RusticTallEndTable"]/designationCategory</xpath>
-                            <value>
-                                <designationCategory>Ferny_Bedroom</designationCategory>
-                            </value>
-                        </match>
-                        <nomatch Class="PatchOperationAdd">
-                            <xpath>/Defs/ThingDef[defName="DankPyon_RusticTallEndTable"]</xpath>
-                            <value>
-                                <designationCategory>Ferny_Bedroom</designationCategory>
-                            </value>
-                        </nomatch>
-                    </Operation>
-                    <Operation Class="PatchOperationConditional">
-                        <xpath>/Defs/ThingDef[defName="DankPyon_RusticDresser"]/designationCategory</xpath>
-                        <match Class="PatchOperationReplace">
-                            <xpath>/Defs/ThingDef[defName="DankPyon_RusticDresser"]/designationCategory</xpath>
-                            <value>
-                                <designationCategory>Ferny_Bedroom</designationCategory>
-                            </value>
-                        </match>
-                        <nomatch Class="PatchOperationAdd">
-                            <xpath>/Defs/ThingDef[defName="DankPyon_RusticDresser"]</xpath>
-                            <value>
-                                <designationCategory>Ferny_Bedroom</designationCategory>
-                            </value>
-                        </nomatch>
-                    </Operation>
-                <Operation Class="PatchOperationAdd">
-                    <success>Always</success>
-                    <xpath>Defs/ThingDef[defName="DankPyon_RoyalEndTable"]</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-
-
-
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[@Name="DankPyon_BedWithQualityBase"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[@Name="DankPyon_BedWithQualityBase"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[@Name="DankPyon_BedWithQualityBase"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/ThingDef[defName="DankPyon_RoyalTudorBed"]/designationCategory</xpath>
 		<match Class="PatchOperationReplace">
@@ -107,6 +25,126 @@
 		</match>
 		<nomatch Class="PatchOperationAdd">
 			<xpath>/Defs/ThingDef[defName="DankPyon_RoyalTudorBed"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[@Name="DankPyon_BasicBedBase"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[@Name="DankPyon_BasicBedBase"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[@Name="DankPyon_BasicBedBase"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="DankPyon_RoyalDresser"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="DankPyon_RoyalDresser"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="DankPyon_RoyalDresser"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="DankPyon_RusticDresser"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="DankPyon_RusticDresser"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="DankPyon_RusticDresser"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="DankPyon_RusticCloset"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="DankPyon_RusticCloset"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="DankPyon_RusticCloset"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="DankPyon_RusticCloset1x2c"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="DankPyon_RusticCloset1x2c"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="DankPyon_RusticCloset1x2c"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="DankPyon_RoyalCloset"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="DankPyon_RoyalCloset"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="DankPyon_RoyalCloset"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="DankPyon_RusticTallEndTable"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="DankPyon_RusticTallEndTable"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="DankPyon_RusticTallEndTable"]</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</nomatch>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="DankPyon_RoyalEndTable"]/designationCategory</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="DankPyon_RoyalEndTable"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Ferny_Bedroom</designationCategory>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="DankPyon_RoyalEndTable"]</xpath>
 			<value>
 				<designationCategory>Ferny_Bedroom</designationCategory>
 			</value>

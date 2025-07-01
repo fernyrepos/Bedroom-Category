@@ -14,12 +14,6 @@
                     </value>
                 </Operation>
                 <Operation Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="Table_LightEndTable"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Ferny_Bedroom</designationCategory>
-                    </value>
-                </Operation>
-                <Operation Class="PatchOperationReplace">
                     <xpath>Defs/ThingDef[defName="Table_RoyalEndTable"]/designationCategory</xpath>
                     <value>
                         <designationCategory>Ferny_Bedroom</designationCategory>
